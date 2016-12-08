@@ -1,0 +1,14 @@
+#TODO: Build master template id:0 gh:1
+#TODO: View/url for home page id:1 gh:2
+#TODO: Set up hosting id:2 gh:3
+#TODO: Host this sucker id:3 gh:4
+#TODO: Build Blog data model id:4 gh:5
+#TODO: Build views/urls for blog root and blog posts id:5 gh:6
+#TODO: Letsencrypt id:6 gh:7
+#TODO: Https by default id:7 gh:8
+#TODO: Markdown for post syntax id:8 gh:9
+#TODO: Ability to save WIP posts id:9 gh:10
+#TODO: Publish posts in future id:10 gh:11
+#TODO: Handle tags id:11 gh:12
+#TODO: "Read More" link (page fold) id:12 gh:13
+#TODO: Comments id:13 gh:14
