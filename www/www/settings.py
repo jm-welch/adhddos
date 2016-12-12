@@ -27,10 +27,15 @@ SECRET_KEY = SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 if socket.gethostname() in DEBUG_HOSTS:
     DEBUG = True
+    ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+]
 else:
     DEBUG = False
-
-ALLOWED_HOSTS = ['127.0.0.1','.pythonanywhere.com']
+    ALLOWED_HOSTS = [
+    '.pythonanywhere.com',
+]
 
 
 # Application definition
