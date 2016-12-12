@@ -1,0 +1,15 @@
+{% extends 'adhddos.html' %}
+
+{% block title %}Blog posts{% endblock %}
+
+{% block content %}
+  {% for post in posts %}
+    <div>
+      <h2><a href="">{{ post.title }}</a></h2>
+      <p class="datestamp">
+        published: {{ post.publish_date }}
+      </p>
+      <p> {{ post.body|linebreaksbr }}</p>
+    </div>
+  {% endfor %}
+{% endblock %}

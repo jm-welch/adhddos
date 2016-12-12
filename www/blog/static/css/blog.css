@@ -1,0 +1,17 @@
+body {
+  background-color: #555555;
+}
+
+p.datestamp {
+  font-size: 75%
+}
+
+header, footer {
+  background-color: #888888;
+  clear: left;
+}
+
+article {
+  background-color: #999999;
+  color: black;
+}
