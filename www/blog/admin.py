@@ -4,12 +4,9 @@ from django.db.models.functions import Lower
 from django.utils.text import slugify
 import itertools
 
-# Register your models here.
-
-# @admin.register(<model>)
-# class <Model>Admin(admin.ModelAdmin):
-#     pass
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
+    #TODO: Show more columns id:16
+    #TODO: "Publish" option for post id:17
     pass
