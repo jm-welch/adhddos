@@ -30,7 +30,7 @@ if socket.gethostname() in DEBUG_HOSTS:
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','adhddos.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1','.pythonanywhere.com']
 
 
 # Application definition
