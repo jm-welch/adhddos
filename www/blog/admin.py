@@ -9,3 +9,7 @@ import itertools
 # @admin.register(<model>)
 # class <Model>Admin(admin.ModelAdmin):
 #     pass
+
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    pass
