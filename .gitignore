@@ -24,7 +24,7 @@ pip-selfcheck.json
 ## Django
 **/migrations/*.py
 db.sqlite3
-/static
+static_root/
 *.log
 local_settings.py
 **/secrets.py
