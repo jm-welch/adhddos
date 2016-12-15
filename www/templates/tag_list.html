@@ -1,0 +1,14 @@
+{% extends 'adhddos.html' %}
+{% load django_markdown %}
+
+{% block title %}Tag List{% endblock %}
+
+{% block content %}
+  <p>
+    <ul>
+    {% for tag, count in tags %}
+      <li><a href="{% url 'by_tags' tags=tag %}">{{tag}}</a> ({{ count }})</li>
+    {% endfor %}
+    </ul>
+  </p>
+{% endblock %}

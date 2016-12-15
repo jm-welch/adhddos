@@ -17,6 +17,9 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.generic.base import RedirectView
 
+#TODO: Letsencrypt id:6 gh:7
+#TODO: Https by default id:7 gh:8
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'blog/', include('blog.urls')),

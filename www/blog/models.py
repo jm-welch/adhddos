@@ -44,3 +44,5 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+#TODO: Support comments on posts id:13 gh:14

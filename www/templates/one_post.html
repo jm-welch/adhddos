@@ -7,9 +7,9 @@
   <div class="">
     <h2>{{ post.title }}</h2>
     <p class="datestamp">
-      published: {{ post.publish_date }} by {{ post.author }}
+      <strong>published:</strong> {{ post.publish_date }} <strong>by</strong> {{ post.author.get_full_name }}
     </p>
     <p>{{ post.body|markdown }}</p>
-    <p class="taglist">tags: {{ post.taglist|join:", " }}</p>
+    <p class="taglist"><strong>tags:</strong> {% for tag in post.taglist %}<a href="{% url 'by_tags' tags=tag%}">{{tag}}</a> {% endfor %}</p>
   </div>
 {% endblock %}

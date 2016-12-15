@@ -9,26 +9,42 @@
 </head>
 <body>
   <div class="container-fluid">
-    <header>
-      <h1><a href="/" class="title">ADHDDoS</a></h1>
+    <header class="row">
+      <div class="col-md-12">
+        <h1><a href="/" class="title">ADHDDoS</a></h1>
+      </div>
     </header>
 
-    <nav class="col-md-4">
-      Navigation here
+    <nav class="row">
+      <div class="col-md-12">
+        <h4><a href="{% url 'index' %}">Blog</a></h4>
+      </div>
     </nav>
 
-    <article>
-      <div class="row">
-        <div class="col-md-8">
-        {% block content %}
-        {% endblock %}
-        </div>
-      </div>
-    </article>
+    <section class="row" id="info">
+      {% block info %}{% endblock %}
+    </section>
 
-    <footer>
+    <div class="row" style="margin-left: 2em;">
+      <article class="col-md-8">
+      {% block content %}
+      There doesn't seem to be anything here. Try again.
+      {% endblock %}
+      </article>
+      <aside class="col-md-4">
+        <h4><small>Blog Navigvation</small></h4>
+        <!--TODO: Add list of posts by date id:19 -->
+        <p><a href="">By date</a></p>
+        <!--TODO: Show top 5 tags id:11 -->
+        <p><a href="{% url 'by_tags' tags='' %}">Tag List</a></p>
+      </aside>
+    </div>
+
+    <footer class="row">
+      <!--TODO: Add a footer  id:20-->
       <p>Footer text here! Yay!</p>
     </footer>
   </div>
 </body>
 </html>
+<!--WIP: Build master template id:0 gh:1 -->
