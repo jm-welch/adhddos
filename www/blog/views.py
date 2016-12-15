@@ -6,7 +6,8 @@ from django_markdown.utils import markdown
 from collections import Counter
 
 def published_posts():
-    return Post.objects.filter(publish_date__lte=timezone.now()).order_by('publish_date')
+    """ Return a list of posts, most recent first """
+    return Post.objects.filter(publish_date__lte=timezone.now()).order_by('publish_date')[::-1]
 
 def post_list(request):
     """ List of published blog posts, most recent first """
