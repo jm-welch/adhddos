@@ -6,7 +6,7 @@
   {% for post in posts %}
     <div>
       <!--TODO: Each post should link to itself via slug  id:18-->
-      <h2><a href="">{{ post.title }}</a></h2>
+      <h2><a href="{% url 'one_post' slug=post.slug %}">{{ post.title }}</a></h2>
       <p class="datestamp">
         published: {{ post.publish_date }}
       </p>

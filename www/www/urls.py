@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    #TODO: Eventually, want to redirect to blog for base URL, but support other apps id:15
-    url(r'', include('blog.urls'))
+    url(r'blog/', include('blog.urls')),
+    url(r'^$', RedirectView.as_view(url='blog', permanent=False), name='index')
 ]

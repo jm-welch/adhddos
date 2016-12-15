@@ -1,0 +1,15 @@
+p.datestamp {
+  font-size: 75%;
+}
+
+header, footer {
+  background-color: #dddddd;
+}
+
+a.title {
+  color: black;
+}
+
+a.title:hover {
+  text-decoration: none;
+}

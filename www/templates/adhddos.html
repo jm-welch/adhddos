@@ -10,13 +10,17 @@
 <body>
   <div class="container">
     <header>
-      <h1>ADHDDoS</h1>
+      <h1><a href="/" class="title">ADHDDoS</a></h1>
     </header>
 
-    <article>
-      {% block content %}
-      {% endblock %}
-    </article>
+    <div class="content container">
+      <div class="row">
+        <div class="col-md-8">
+        {% block content %}
+        {% endblock %}
+        </div>
+      </div>
+    </div>
 
     <footer>
       <p>Footer text here! Yay!</p>
