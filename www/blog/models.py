@@ -2,10 +2,11 @@ import itertools
 from django.db import models
 from django.utils import timezone
 from django.utils.text import slugify
+from django_markdown.models import MarkdownField
 
 class Post(models.Model):
     title = models.CharField(max_length=200)
-    body = models.TextField()
+    body = MarkdownField()
     author = models.ForeignKey('auth.User')
     tags = models.CharField(max_length=200,
                             blank=True, null=True,
@@ -30,6 +31,10 @@ class Post(models.Model):
             slug = '{s}-{n}'.format(s=orig, n=x)
 
         return slug
+
+    @property
+    def taglist(self):
+        return self.tags.split(',')
 
     def save(self, *args, **kwargs):
         # Override the default .save() method to enforce a unique slug

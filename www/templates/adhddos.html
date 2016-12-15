@@ -8,19 +8,23 @@
   <title>{% block title %}Home{% endblock %}</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <header>
       <h1><a href="/" class="title">ADHDDoS</a></h1>
     </header>
 
-    <div class="content container">
+    <nav class="col-md-4">
+      Navigation here
+    </nav>
+
+    <article>
       <div class="row">
         <div class="col-md-8">
         {% block content %}
         {% endblock %}
         </div>
       </div>
-    </div>
+    </article>
 
     <footer>
       <p>Footer text here! Yay!</p>

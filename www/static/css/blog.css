@@ -1,9 +1,30 @@
-p.datestamp {
+p.datestamp, p.taglist {
   font-size: 75%;
 }
 
 header, footer {
   background-color: #dddddd;
+}
+
+footer {
+  margin-top: 1em;
+}
+
+nav {
+  margin: 0;
+  padding: 1em;
+  float: left;
+  max-width: 160px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding; 0;
+}
+
+div.postblock {
+  border-bottom: 1px black solid;
+  margin-bottom: 1em;
 }
 
 a.title {

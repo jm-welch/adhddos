@@ -1,16 +1,17 @@
 {% extends 'adhddos.html' %}
+{% load django_markdown %}
 
 {% block title %}Blog posts{% endblock %}
 
 {% block content %}
   {% for post in posts %}
-    <div>
+    <div class="postblock">
       <!--TODO: Each post should link to itself via slug  id:18-->
       <h2><a href="{% url 'one_post' slug=post.slug %}">{{ post.title }}</a></h2>
       <p class="datestamp">
         published: {{ post.publish_date }}
       </p>
-      <p> {{ post.body|linebreaksbr }}</p>
+      <p> {{ post.body|markdown }}</p>
     </div>
   {% endfor %}
 {% endblock %}

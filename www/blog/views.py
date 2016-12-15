@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
+from django.http import Http404
 from django.utils import timezone
 from .models import Post
+from django_markdown.utils import markdown
 
 # Create your views here.
 def post_list(request):
@@ -14,8 +16,10 @@ def one_post(request, slug):
         return post_list(request)
 
     post = get_object_or_404(Post, slug=slug)
+    if post.publish_date <= timezone.now():
+        return render(request, 'one_post.html', {'post': post})
 
-    return render(request, 'one_post.html', {'post': post})
+    raise Http404
 
 def tag_list(request, tags):
     """ View posts with the given tags (tags should be +-delimited) """

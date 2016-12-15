@@ -1,4 +1,5 @@
 {% extends 'adhddos.html' %}
+{% load django_markdown %}
 
 {% block title %}{{ post.title }}{% endblock %}
 
@@ -8,6 +9,7 @@
     <p class="datestamp">
       published: {{ post.publish_date }} by {{ post.author }}
     </p>
-    <p>{{ post.body|linebreaksbr }}</p>
+    <p>{{ post.body|markdown }}</p>
+    <p class="taglist">tags: {{ post.taglist|join:", " }}</p>
   </div>
 {% endblock %}
