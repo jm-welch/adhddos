@@ -5,6 +5,7 @@
 
 {% block content %}
   <p>
+    <h5>All tags</h5>
     <ul>
     {% for tag, count in tags %}
       <li><a href="{% url 'by_tags' tags=tag %}">{{tag}}</a> ({{ count }})</li>
