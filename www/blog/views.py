@@ -17,6 +17,8 @@ def one_post(request, slug):
 
     post = get_object_or_404(Post, slug=slug)
     if post.publish_date <= timezone.now():
+        post.views += 1
+        post.save()
         return render(request, 'one_post.html', {'post': post})
 
     raise Http404
