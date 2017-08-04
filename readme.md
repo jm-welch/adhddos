@@ -1,1 +1,1 @@
-[Issues](issues)
+[Issues](/issues)
